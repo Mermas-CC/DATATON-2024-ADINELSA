@@ -6,48 +6,38 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Features",
+    title: "DASHBOARD",
     path: "#",
     children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
+      
     ],
   },
   {
-    title: "Pricing",
-    path: "/pricing",
-  },
-  {
-    title: "About",
+    title: "DASHBOARD",
     path: "/about",
   },
+
   {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
+    title: "PREDICTION",
+    badge: false,
     path: "https://astroship-pro.web3templates.com/",
   },
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5 ml-32 mr-32">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
+        <a href="/" class="text-lg block">
+          <img 
+            src="https://www.fonafe.gob.pe/pw_content/empresas/13/Img/Adinelsa.png?1525029296" 
+            alt="Descripción de la imagen"
+            class="w-32 h-auto object-contain"
           >
         </a>
+        
+        
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
@@ -57,13 +47,7 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
-                {item.children && (
-                  <Dropdown
-                    title={item.title}
-                    children={item.children}
-                    lastItem={index === menuitems.length - 1}
-                  />
-                )}
+                
 
                 {!item.children && (
                   <li>
@@ -89,11 +73,6 @@ const menuitems = [
         </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
-      </div>
-    </div>
+
   </header>
 </Container>

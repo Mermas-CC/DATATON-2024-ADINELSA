@@ -1,69 +1,35 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon/components";
-
-const features = [
-  {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
-  },
-  {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
-  },
-  {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
-  },
-];
+import Tabla from "./tabla.astro"
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+<div class="mt-16 md:mt-0  bg-gray-300">
+  <div class="ml-32 mr-32 pt-16 pb-12">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center mb-8">
+    Prediccion de consumo para Junio
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+  <p class="text-lg mt-4 text-slate-600 mt-8 mb-8 text-center ml-32 mr-32">
+    El resultado de las predicciones de consumo para junio muestra que Lima lidera con 1,398,589.98 kW, reflejando su alta población y actividad económica. Ayacucho sigue con 732,602.81 kW y Arequipa con 234,939.78 kW. Otros departamentos como Ica y Cajamarca presentan consumos menores, entre 165,741.38 kW y 75,399.28 kW. Los departamentos con menor consumo, como Amazonas, Ucayali y Apurímac, registran proyecciones mucho más bajas, desde 6,950.10 kW a 2,725.30 kW, lo que sugiere menor demanda energética en estas regiones.
   </p>
+    <img src="img.jpeg" alt="" class="mb-8">
+
+    
+  
+    <div class="text-center mb-8">
+      Valor más alto: <span class="text-red-700">Lima con 1,398,590 KW.</span>
+      <br>
+      Valor medio: <span class="text-yellow-200">Ica con 165,741 KW.</span>
+      <br>
+      Valor más bajo: <span class="text-yellow-100">Junín con 210 KW.</span>
+      </div>
+
+  
+  <Tabla />
+  
+</div>
 </div>
 
+
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
+
 </div>

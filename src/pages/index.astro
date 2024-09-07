@@ -5,13 +5,21 @@ import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+import Frame from "@components/frame.astro";
 ---
 
 <Layout title="">
   <Container>
+    
     <Hero />
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center  mt-8">
+      DASHBOARD
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 mt-8 text-center ml-64 mr-64">
+      Estamos utilizando un dashboard de Power BI para representar dinámicamente los datos combinados de nuestros conjuntos de datos. Esta herramienta nos permite visualizar la información en tiempo real a través de gráficos interactivos, facilitando la toma de decisiones basada en datos actualizados.</p>
+    <Frame />
     <Features />
-    <Logos />
-    <Cta />
+    
   </Container>
+  
 </Layout>
